@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Car Payment Calculator</string>
+    <string name="car_price">Car Price</string>
+    <string name="interest_rate">Interest Rate:</string>
+    <string name="payments_button">Monthly Payments</string>
+    <string name="twentfour_payments">24 Months:</string>
+    <string name="thirtysix_payments">36 Months:</string>
+    <string name="fortyeight_payments">48 Months:</string>
+    <string name="sixty_payments">60 Months:</string>
+    <string name="down_payments">Down Payment</string>
+</resources>

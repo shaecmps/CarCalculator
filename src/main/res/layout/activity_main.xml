@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="20dp"
+    tools:context="com.tiannacano.carpaymentcalculator.MainActivity">
+
+    <EditText
+        android:id="@+id/carPriceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_row="0"
+        android:digits="0123456789"
+        android:elevation="@dimen/elevation"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="@dimen/textview_padding"
+        android:textSize="@dimen/fontSize" />
+
+    <TextView
+        android:id="@+id/carPriceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_row="0"
+        android:background="@color/amount_background"
+        android:elevation="@dimen/elevation"
+        android:gravity="center"
+        android:hint="@string/car_price"
+        android:padding="@dimen/textview_padding"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textSize="@dimen/fontSize" />
+
+    <EditText
+        android:id="@+id/downPaymentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_row="1"
+        android:digits="0123456789"
+        android:elevation="@dimen/elevation"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:padding="@dimen/textview_padding"
+        android:textSize="@dimen/fontSize" />
+
+    <TextView
+        android:id="@+id/downPaymentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_row="1"
+        android:background="@color/amount_background"
+        android:elevation="@dimen/elevation"
+        android:ems="10"
+        android:gravity="center"
+        android:padding="@dimen/textview_padding"
+        android:text="@string/down_payments"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textSize="@dimen/fontSize" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:columnCount="2">
+
+        <TextView
+            android:id="@+id/interestRateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/elevation"
+            android:text="@string/interest_rate"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/fontSize" />
+
+        <TextView
+            android:id="@+id/interestRateValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/textview_padding"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/largeFontSize"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+    <SeekBar
+        android:id="@+id/interestRateSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seekbar_height"
+        android:max="100"
+        android:progress="10"
+        android:thumbTint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/monthlyPaymentsButton"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="@string/payments_button"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/fontSize"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ResultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Your Monthly Installments:"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/fontSize"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <GridLayout
+        android:id="@+id/results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/twentyFourTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:text="@string/twentfour_payments"
+            android:textSize="@dimen/fontSize" />
+
+        <TextView
+            android:id="@+id/twentyFourResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|end"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/largeFontSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/thirtySixTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:text="@string/thirtysix_payments"
+            android:textSize="@dimen/fontSize" />
+
+        <TextView
+            android:id="@+id/thirtySixResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|end"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/largeFontSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fortyEightTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:text="@string/fortyeight_payments"
+            android:textSize="@dimen/fontSize" />
+
+        <TextView
+            android:id="@+id/fortyEightResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|end"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/largeFontSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sixtyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:text="@string/sixty_payments"
+            android:textSize="@dimen/fontSize" />
+
+        <TextView
+            android:id="@+id/sixtyResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill|end"
+            android:background="@color/result_background"
+            android:elevation="@dimen/elevation"
+            android:paddingLeft="@dimen/textview_padding"
+            android:paddingRight="@dimen/textview_padding"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/largeFontSize"
+            android:textStyle="bold" />
+    </GridLayout>
+
+</GridLayout>
